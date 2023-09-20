@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,300;1,600&family=Open+Sans&family=Prata&family=Raleway:ital,wght@0,100;0,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif ;
+}
+
+
+.banner{
+    background: url("/public/images/Banner.png") no-repeat center / cover;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.banner-caja1{
+    margin-bottom: 60px;
+    margin-left: 30px;
+    max-width: 57% ;
+}
+h2{
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+p{
+    color: #fff;
+}
+.banner-title__category{
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background-color: #6BD1FF;
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+
+.banner-caja2 >img{
+    width: 350px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    
+}
+
