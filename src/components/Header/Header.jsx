@@ -1,20 +1,37 @@
 import React from 'react'
-import "./Header.css"
 import "../reset.css"
 import Button from '../Button/button'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
+const ButtonHome = styled.button`
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  transform: scale(1.1);
+  transition-duration:0.8s ;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+`
+
+const ContainerHeader = styled.div`
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #000;
+`
 
 
 function Header() {
   return (
-    <div className='container'>
-        <img src="/images/Logo.png" alt="Logo" />
+    <ContainerHeader className='container'>
+        <Link to={"/"}>  <img src="/images/Logo.png" alt="Logo" /></Link>
+       
 
-        {/* <button className="negro">Nuevo video</button> */}
 
-       <Link to={"/nuevo-video"}><Button className="gris">Nuevo Video</Button> </Link>
-    </div>
+       <Link to={"/nuevo-video"}><ButtonHome>Nuevo Video</ButtonHome> </Link>
+    </ContainerHeader>
   )
   }
 
