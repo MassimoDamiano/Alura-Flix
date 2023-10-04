@@ -17,12 +17,17 @@ const ContainerButtons= styled.div`
   justify-content: space-between;
   align-items: center;
 `
+const BtnForm= styled.button`
+  padding: 15px 30px;
+  margin-top: 15px;
+  margin-right: 15px;
+  border-radius: 5%;
+  background-color: ${(props) => props.primary ? "#2A7AE4" : "#9E9E9E"  };
+  color: #FFF;
+  font-size: 14px;
+`
 
 
-const ButtonE = styled(Button)({
-  margin:"5px",
-  padding:"20px"
-});
 
 function Video({handleSubmit}) {
  
@@ -150,7 +155,7 @@ function Video({handleSubmit}) {
   return (
     <div>
         <Header/>
-      <Container maxWidth="lg">
+      <Container maxWidth="">
         <form onSubmit={(e) => {
            e.preventDefault() 
           handleSubmit({titulo,linkI,linkV,categoria,descripcion,codigo})
@@ -230,22 +235,14 @@ function Video({handleSubmit}) {
             setDescripcion(e.target.value)
           }}
           />
+          <ContainerButtons>
 
-          <TextField 
-            id="outlined-basic" 
-            label='Codigo de seguridad' 
-            value={codigo}
-            variant="outlined" 
-            fullWidth={true}
-            margin='normal'
-            InputProps={{className:"input"}}
-            InputLabelProps={{className:"label"}}
-            onChange={(e) =>{
-              setCodigo(e.target.value)
-            }}
-          />
-          
-            <Button variant="contained" margin='normal' type='submit'>Crear Video </Button>
+            <div className="w">
+            <BtnForm variant="contained" primary margin='normal' type='submit'>Crear Video </BtnForm>
+            <BtnForm variant="contained" margin='normal' type='submit'>Limpiar </BtnForm>
+            </div>
+            <Button>Crear categoria</Button>
+          </ContainerButtons>
             
         </form>
       </Container>

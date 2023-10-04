@@ -14,11 +14,14 @@ const ContainerSlider = styled.div`
 const Caja = styled.div`
         margin-top: 50px;
         margin: 10px;
+        padding: 20px;
+
     `
 const Img = styled.img`
         object-fit: contain;
         height: 200px;
         width: 400px;
+        padding: 20px;
     `
 const TitleCategory = styled.h1`
   font-size: 3rem;

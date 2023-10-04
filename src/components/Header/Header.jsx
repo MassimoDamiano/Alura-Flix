@@ -12,6 +12,7 @@ const ButtonHome = styled.button`
   cursor: pointer;
   background-color: #000;
   color: #fff;
+  display: ${(props) => props.display ? "block" : "none"};
 `
 
 const ContainerHeader = styled.div`
@@ -30,7 +31,7 @@ function Header() {
        
 
 
-       <Link to={"/nuevo-video"}><ButtonHome>Nuevo Video</ButtonHome> </Link>
+       <Link to={"/nuevo-video"}><ButtonHome display >Nuevo Video</ButtonHome> </Link>
     </ContainerHeader>
   )
   }
